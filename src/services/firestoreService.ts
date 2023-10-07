@@ -1,4 +1,4 @@
-import { firebaseConfig } from "./firebaseConfig.js";
+import { firebaseConfig } from "./firebaseConfig";
 import { initializeApp } from "firebase/app";
 import {
   Firestore,
@@ -24,6 +24,7 @@ const db = getFirestore();
 
 
 let smykkerCollection = collection(db, "smykker");
+
 async function getSmykkerDB() {
   let smykkerQueryDocs = await getDocs(smykkerCollection);
   let smykker = smykkerQueryDocs.docs.map((doc) => {
