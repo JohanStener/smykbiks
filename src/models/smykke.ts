@@ -1,4 +1,4 @@
-class Smykke{
+export class Smykke{
     id: number;
     navn: string;
     pris: number;
@@ -15,10 +15,8 @@ class Smykke{
 
 }
 
-enum SmykkeType {
+export enum SmykkeType {
     Armbånd = "armbånd",
     Halskæde = "halskæde",
     Ørering = "ørering"
   }
-
-export default Smykke;

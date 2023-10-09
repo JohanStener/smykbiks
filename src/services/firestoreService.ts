@@ -12,7 +12,7 @@ import {
   updateDoc
 } from "firebase/firestore";
 import { getStorage, ref } from "firebase/storage";
-import Smykke from "../models/smykke.js";
+import {Smykke} from "../models/smykke.js";
 
 // init firebase app
 const app_firebase = initializeApp(firebaseConfig);
