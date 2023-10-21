@@ -5,7 +5,7 @@ admin.initializeApp();
 const db = admin.firestore();
 import { Smykke, SmykkeType } from "../../src/models/smykke"
 
-exports.processImage = functions.storage.bucket("smykkebiksen.appspot.com").object().onFinalize(async (object: any) => {
+exports.trigger = functions.storage.bucket("smykkebiksen.appspot.com").object().onFinalize(async (object: any) => {
   const bucketName = object.bucket; // Navnet på lagringsbucket'en
   const filePath = object.name; // Stien til det lagrede objekt
 
