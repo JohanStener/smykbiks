@@ -12,7 +12,7 @@ exports.processImage = functions.storage.bucket("smykkebiksen.appspot.com").obje
   // Konstruer URL'en baseret på bucket-navnet og objektstien
   const fileURL = `https://storage.googleapis.com/${bucketName}/${filePath}`;
 
-  let smykke = new Smykke(1, "Johan", 100, "Armbond.jpg", SmykkeType.Armbånd);
+  let smykke = new Smykke(1, "Peter", 100, "Armbond.jpg", SmykkeType.Armbånd);
 
   await db.collection("smykker").add({
     id: smykke.id,
